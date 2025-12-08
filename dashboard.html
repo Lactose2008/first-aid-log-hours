@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>First Aider — Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase-init.js"></script>
+  <script type="module" src="dashboard.js" defer></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-50 to-pink-50 p-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold text-indigo-600">Your Duty Logs</h1>
+      <div class="flex gap-2">
+        <a href="supervisor.html" id="supervisorLink" class="hidden bg-yellow-500 text-white px-3 py-2 rounded">Supervisor</a>
+        <button id="logoutBtn" class="bg-red-500 text-white px-3 py-2 rounded">Logout</button>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow mb-6">
+      <div class="mb-4 text-sm text-gray-600">Logged in as: <span id="userEmail" class="font-semibold"></span></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+        <input id="date" type="date" class="col-span-1 md:col-span-1 p-3 rounded border" />
+        <input id="event" type="text" placeholder="Event name" class="col-span-2 p-3 rounded border" />
+        <input id="start" type="time" class="p-3 rounded border" />
+        <input id="end" type="time" class="p-3 rounded border" />
+        <input id="proof" type="file" accept="image/*" class="p-2" />
+      </div>
+
+      <button id="submitLogBtn" class="bg-indigo-600 text-white px-4 py-2 rounded">Submit Duty Log</button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="font-semibold mb-3">Logs</h2>
+      <div class="mb-4">
+        <span class="text-sm text-gray-600">Total hours (all time): </span><strong id="totalAll">0</strong>
+        <span class="ml-4 text-sm text-gray-600">Total hours (this week): </span><strong id="totalWeek">0</strong>
+      </div>
+      <ul id="logList" class="space-y-3 max-h-72 overflow-y-auto"></ul>
+    </div>
+  </div>
+</body>
+</html>
