@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Supervisor — Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase-init.js"></script>
+  <script type="module" src="supervisor.js" defer></script>
+</head>
+<body class="min-h-screen bg-slate-50 p-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold">Supervisor Dashboard</h1>
+      <div>
+        <button id="backBtn" class="bg-gray-200 px-3 py-2 rounded mr-2">Back</button>
+        <button id="logoutBtn" class="bg-red-500 text-white px-3 py-2 rounded">Logout</button>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="font-semibold mb-2">Summary</h2>
+      <div id="summary" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="font-semibold mb-3">All Logs</h2>
+      <ul id="allLogs" class="space-y-3 max-h-96 overflow-y-auto"></ul>
+    </div>
+  </div>
+</body>
+</html>
