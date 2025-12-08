@@ -1,41 +1,7 @@
-/* Base font */
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* style.css */
+:root {
+  --glass: rgba(255,255,255,0.8);
 }
-
-/* Heading style */
-h1 {
-  text-shadow: 1px 1px 4px black;
-}
-
-/* List items for logs */
-#log-list li {
-  border-bottom: 1px solid #333;
-  padding-bottom: 4px;
-}
-
-/* Inputs */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
-input[type="time"],
-input[type="file"] {
-  transition: all 0.2s;
-}
-
-input:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(79, 70, 229, 0.8);
-}
-
-/* Buttons */
-button {
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
+body { font-family: "Segoe UI", Roboto, system-ui, sans-serif; }
+a { color: inherit; }
+#logList li, #allLogs li { list-style: none; }
