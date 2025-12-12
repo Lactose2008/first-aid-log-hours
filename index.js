@@ -1,5 +1,5 @@
 // index.js
-import { auth } from './firebase-init.js';
+/*import { auth } from './firebase-init.js';
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
